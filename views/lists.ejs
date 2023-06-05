@@ -1,0 +1,17 @@
+<%- include('header'); -%>
+<body>
+  <div class="box" id="heading">
+  <h1> <%= currentOfDay %> </h1> 
+</div> 
+<div class="box">
+        <%for (let i = 0; i <= addtodos.length; i++) {%>
+   <div class="item">
+    <input type="checkbox">
+         <p><%= addtodos[i] %></p>
+   </div>  
+        <%}%>
+  <form class="item" action="/" method="post">
+      <input type="text" name="addtodo" placeholder="Add Your's" autocomplete="off">
+    <button type="submit" name="lists" value= <%= currentOfDay %> >+</button> 
+   </form>
+   <%- include('footer'); -%>
